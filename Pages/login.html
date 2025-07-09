@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/global/style.css">
+    <script src="https://kit.fontawesome.com/b41a2641cf.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <main class="wrapper">
+        <div class="container container-login">
+            <div class="left-main">
+                    <img src="/asset/photo-1526958097901-5e6d742d3371.jpg" alt="">
+                </div>
+            <div class="right-main">
+                    <h2 class="logo logo-main">JAr</h2>
+                    <p class="right-p">Lets sign you in or help you <a href="/Pages/signup.html">create an account</a> if you don’t have any yet’.</p>
+                    
+                    <div class="socials">
+                
+                        <div class="google">
+                            <p>Google</p>
+                            <i class="fa-brands fa-google fa-xs" style="color: #ffffff;"></i>
+                        </div>
+                        <div class="facebook"  onclick="">
+                            <p>Facebook</p>
+                            <i class="fa-brands fa-facebook-f fa-xs" style="color: #ffffff;"></i>
+                        </div>
+
+                    </div>
+                    <div class="or-cont">
+                        <!-- <div class="or-left"></div> -->
+                         <hr class="custom-line">
+                        <p>or</p>
+                         <hr class="custom-line">
+                        <!-- <div class="or-right"></div> -->
+                    </div>
+                    <div class="error-wrapper">
+                        <p id="error-message" class="inline-error"></p>
+                        
+                    </div>
+                    <form class="input-group" id="form">
+                        <div class="input-field">
+                            <label for="email"></label>
+                            <input type="text" id="email" placeholder="Username or email" >
+                        </div>
+                        <div class="input-field input-field-password">
+                            <label for="password"></label>
+                            <input type="password" id="password" placeholder="Password" >
+                        </div>
+                        <button type="submit">Log In</button>
+                        <p class="forgot-password">Forgot Password?</p>
+                    </form>
+                    <script src="/auth.js" defer></script>
+        </div>
+    </main>
+</body>
+</html>

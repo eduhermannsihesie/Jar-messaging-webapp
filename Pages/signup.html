@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/global/style.css">
+    <script src="https://kit.fontawesome.com/b41a2641cf.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+    <main class="wrapper">
+        <div class="container container-signup">
+            <div class="left-main left-main-signup">
+                    <img src="/asset/photo-1526958097901-5e6d742d3371.jpg" alt="">
+            </div>
+
+            <div class="right-main right-main-signup">
+                    <h2 class="logo logo-main">JAr</h2>
+                    <p class="right-p right-p-signup"><span>Sign Up</span> to strenthen daily emotional connections - one heartfelt message at a time.</p>
+                    
+                    <div class="socials-signup">
+                        <p>Continue with</p>
+                        
+                        <div class="google-signup"><a href="https://www.google.com/">
+                            <i class="fa-brands fa-google fa-xs" style="color: #ffffff;"></i>
+                        </a></div>
+                        <div class="facebook-signup">
+                            <a href="https://web.facebook.com/">
+                                <i class="fa-brands fa-facebook-f fa-xs" style="color: #ffffff;"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <p id="error-message"></p> -->
+                    <div class="error-wrapper">
+                        <p id="error-message" class="inline-error"></p>
+                        <ul id="error-list" class="error-list"></ul>
+                    </div>
+
+                    <form class="input-group input-group-signup" id="form">
+                         <div class="input-field field1 input-field2">
+                            <input type="text" id="name" placeholder="Your name" >
+                        </div>
+                        <div class="input-field input-field2">
+                            <input type="email" id="email" placeholder="Your email" >
+                        </div>
+                        <div class="input-field input-field2">
+                            <input type="password" id="password" placeholder="Create a password" >
+                        </div>
+                       
+                        <label class="category-cont">What category do you fall into?</label>
+                            <div class="role-select">
+                                <button type="button" onclick="selectRole('Sender')" id="senderBtn">Sender</button>
+                                <button type="button" onclick="selectRole('Receiver')" id="receiverBtn">Receiver</button>
+                            </div>
+                            <!-- Only show this if user selects 'Sender' -->
+                        <div id="receiver-email-field" style="display: none;">
+                            <label class="receiver-mail" for="receiverEmails">Receiver Email:</label>
+                            <input type="text" id="receiverEmails" placeholder="user1@example.com" />
+                        </div>
+                        <button type="submit" class="submit-signup">Sign Up</button>
+                                
+
+                        <p class="toggle-container-p">Already have an account? <a href="/Pages/login.html">Click Here!</a></p>
+                    </form>
+                    
+            </div>
+        </div>
+    </main>
+    <script src="/auth.js"></script>
+</body>
+</html>

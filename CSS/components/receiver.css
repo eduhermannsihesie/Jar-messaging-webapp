@@ -1,0 +1,134 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #f8f8f8;
+}
+ header{
+    
+    width: 100%;
+    padding-block: 1em 3em;
+    padding-inline: 18em;
+  }
+
+.receiver-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.message-box {
+  background-color: var(--color-lightblue);
+  min-width: 40em;
+  min-height: 15em;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  min-height: 100px;
+}
+.btn-group {
+  
+  margin-top: 30px;
+}
+
+.btn-group button,
+.view-all {
+  margin: 10px 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: var(--color-blue);
+  color: white;
+  font-weight: bold;
+}
+
+#save-btn { 
+
+  background-color: #4caf50;
+  font-weight: bold;
+   color: white; 
+  }
+
+#delete-btn { 
+  font-weight: bold;
+  background-color: #f44336; 
+  color: white; }
+
+
+.all-messages {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.message-item {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.message-item .delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: gray;
+}
+
+.hidden {
+  display: none;
+}
+
+
+@media (width <= 70em) {
+  header{
+    
+    width: 100%;
+    padding-block: 1em 3em;
+    padding-inline: 3em;
+  }
+  nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+   
+  }
+  
+  .receiver-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .message-box {
+    min-width: 100%;
+    min-height: 20em;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-group {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5em;
+  }
+
+  .btn-group button,
+  .view-all {
+    width: 100%;
+    margin: 7px 0;
+  }
+}

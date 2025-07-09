@@ -1,0 +1,57 @@
+@import url('/CSS/components/login.css');
+@import url('/CSS/components/signup.css');
+@import url('/CSS/components/inputer.css');
+@import url('/CSS/components/receiver.css');
+
+:root {
+    --color-blue : #293241;
+    --color-lightblue : #E0FBFC;
+    --color-lightblue-2 : #A7D0D2;
+    --color-red : #B32F0F;
+    --color-grey: hsl(232, 10%, 56%);
+    --color-white: #ffffff;
+    --gradient-red: linear-gradient(349deg,rgba(179, 47, 15, 1) 0%, rgba(41, 50, 65, 1) 100%);
+
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Inter", sans-serif;
+     margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* centers horizontally */
+    align-items: center;      /* centers vertically */
+    background-color: #fff;   /* optional, background color */
+    font-family: sans-serif;
+}
+
+#error-message{
+    color: red;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 0.8rem;
+}   
+#logout-btn {
+  background-color: #f44336;         /* Red background */
+  color: white;                      /* White text */
+  border: none;                      /* No border */
+  border-radius: 6px;                /* Rounded corners */
+  padding: 9px 18px;                /* Spacing */
+  font-size: 14px;                   /* Text size */
+  font-weight: 600;                  /* Slightly bold */
+  cursor: pointer;                   /* Cursor changes on hover */
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#logout-btn:hover {
+  background-color: #d32f2f;         /* Darker red on hover */
+}

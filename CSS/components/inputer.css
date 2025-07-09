@@ -1,0 +1,231 @@
+body{
+  flex-direction: column;
+}
+
+
+.logo{
+    display: block;
+}
+header{
+  width: 100%;
+  padding-bottom: 3em;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imputer-main{
+     display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input-container-textarea {
+  position: relative;
+  width: 100%;
+ 
+}
+
+.input-container-textarea label {
+  position: absolute;
+  top: -8px;
+  left: 45px;
+  background: #fff;
+  padding: 0 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-blue);
+}
+
+.input-container-textarea textarea {
+  width: 100%;
+  height: 100px;
+  border: 3.5px solid var(--color-lightblue-2);
+  border-radius: 10px;
+  padding: 10px 35px 10px 10px;
+  resize: none;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 2em;
+}
+
+.input-container-textarea textarea:focus {
+  border-color: #5dbcd2;
+}
+
+.actions {
+  position: absolute;
+  bottom: 45px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  
+}
+.actions button{
+  border: none;
+  background-color: transparent;
+}
+.actions i{
+font-size: 18px;
+  cursor: pointer;
+}
+
+
+.popup {
+  position: fixed;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  border: 2px solid #a2dcdc;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 10;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.is-hidden {
+  display: none;
+}
+
+#receiver-message {
+  background-color: #e6fcff;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+#waveform {
+  flex: 1;
+  height: 40px;
+}
+
+#duration {
+  font-family: monospace;
+  font-size: 1.4rem;
+  color: var(--color-blue);
+}
+.view-all{
+  margin-top: 0.5em;
+  font-size: 0.8em;
+  color: var(--color-blue);
+  cursor: pointer;
+  text-decoration: underline;
+  text-align: center;
+  font-weight: 500;
+}
+
+.sent-msg {
+  position: relative;
+  display: flex;
+  justify-content: center; /* centers the msg-content horizontally */
+  align-items: center;
+  padding: 10px 40px 10px 10px; /* extra space on right for delete button */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+    background: var( --color-lightblue);
+    width: 700px;
+    min-height: 5em;
+
+}
+
+.msg-content {
+  max-width: 80%;
+  text-align: center;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 60%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+
+/* Hide popup when .is-hidden is present */
+#recorder-popup.is-hidden {
+  display: none;
+}
+
+/* Popup container */
+#recorder-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 350px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 25px 30px;
+  z-index: 9999;
+  text-align: center;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Optional heading */
+#recorder-popup h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Buttons inside the popup */
+#recorder-popup button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 8px;
+  background: #00c6ff;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Button hover effect */
+#recorder-popup button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 114, 255, 0.4);
+}
+
+
+#popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+  display: none;
+}
+
+/* Show overlay when popup is active */
+#popup-overlay.active {
+  display: block;
+}

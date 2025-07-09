@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/global/style.css">
+    <script src="https://kit.fontawesome.com/b41a2641cf.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header class="wrapper">
+        <nav>
+            <h2 class="logo">JAr</h2>
+            <div class="nav-left">
+                <button class="logout-btn" id="logout-btn">Logout</button>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="wrapper imputer-main">
+        <div class="input-container-textarea">
+            <label for="thoughts">What's on your mind, <span class="firstname" id="user-name">you?</span></label>
+            <textarea id="thoughts" placeholder=" "></textarea>
+            <div class="actions">
+                <button onclick="submitMessage()"><i class="fa-solid fa-paper-plane" style="color: #09224e;"></i> 
+                </button>
+                <button onclick="recordMessage()" class="mic-toggle" id="mic"><i class="fa-solid fa-microphone-lines" style="color: #b30c00;"></i>
+                    </button>
+            </div>
+        </div>
+
+         <!-- <div id="recorder-popup" class="popup is-hidden">
+            <p>🎙️ Recording...</p>
+            <button id="start-recording">Start</button>
+            <button id="stop-recording">Stop</button>
+            <button id="close-popup">Close</button>
+        </div> -->
+
+        <div id="recorder-popup" class="popup is-hidden">
+                <p>🎙️ Recording...</p>
+                <button id="start-recording">Start</button>
+                <button id="stop-recording">Stop</button>
+        </div>
+                
+       
+
+
+        <div class="sent-msg-container">
+            <div class="sent-msg">
+            </div>
+        </div>
+
+        <p class="view-all" id="toggle-view-btn">View All</p>
+
+        
+        </main>
+        
+        <script src="/imputer.js" defer></script>
+</body>
+</html>

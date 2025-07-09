@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/global/style.css">
+    <script src="https://kit.fontawesome.com/b41a2641cf.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="logo">JAr</h2>
+            <button id="logout-btn">Logout</button>
+
+        </nav>
+    </header>
+
+    <main class="wrapper imputer-main">
+      
+        <div class="container receiver-container">
+
+            <div id="message-box" class="message-box">
+                <!-- Latest message will appear here -->
+                </div>
+
+                <div class="btn-group">
+                        <button id="save-btn">Save</button>
+                        <button id="delete-btn">Delete</button>
+                </div>
+
+                <button id="view-all-btn" class="view-all">View All </button>
+
+                <div id="all-messages" class="all-messages hidden">
+                <h3>All Messages</h3>
+                <div id="message-list"></div>
+                </div>
+            </div>
+
+                
+                    </main>
+                    
+        <script src="/receiver.js" defer></script>
+</body>
+</html>
