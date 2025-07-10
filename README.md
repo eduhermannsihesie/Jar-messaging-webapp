@@ -29,21 +29,6 @@ It’s designed to strengthen connections through personalized messages sent and
 - Save important messages for later
 - Delete messages as needed
 
-##  Project Structure
-
-```plaintext
-├── index.html
-├── login.html
-├── signup.html
-├── imputer.html          # Sender dashboard
-├── receiver.html         # Receiver dashboard
-├── style.css
-├── scripts/
-│   ├── auth.js
-│   ├── imputer.js
-│   ├── receiver.js
-│   └── recorder.js
-
 ## Technologies Used
 -  HTML / CSS / JavaScript
 -  Web Audio API for recording

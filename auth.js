@@ -186,7 +186,7 @@ function completeSignupOrLogin(isSignup) {
 
     // Redirect based on role
     // If role is Sender, redirect to inputer page, else to receiver page
-    window.location.href = selectedRole === 'Sender' ? '/Pages/inputer.html' : '/Pages/receiver.html';
+    window.location.href = selectedRole === 'Sender' ? '/index.html' : '/receiver.html';
   } else {
     // Login flow
     // Check if user exists in localStorage
@@ -201,7 +201,7 @@ function completeSignupOrLogin(isSignup) {
     localStorage.setItem('loggedInUser', JSON.stringify(user));// Store logged-in user data
 
     // Redirect based on user role
-    window.location.href = user.role === 'Sender' ? '/Pages/inputer.html' : '/Pages/receiver.html';
+    window.location.href = user.role === 'Sender' ? '/index.html' : '/receiver.html';
   }
 }
 

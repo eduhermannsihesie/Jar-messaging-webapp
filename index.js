@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const userData = JSON.parse(localStorage.getItem('loggedInUser')); // Get logged-in user's data from localStorage
 
   if (!userData) {
-    window.location.href = '/Pages/login.html'; // Redirect to login if not logged in
+    window.location.href = '/login.html'; // Redirect to login if not logged in
     return;
   }
 
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (logoutBtn) {
     logoutBtn.addEventListener('click', () => {
       localStorage.removeItem('loggedInUser'); // Clear session
-      window.location.href = '/Pages/login.html'; // Redirect to login
+      window.location.href = '/login.html'; // Redirect to login
     });
   }
 
@@ -172,38 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
-// For voice note sending
-// --------Save Voice Message to Local Storage-------------
-// function saveAudioMessage(blob) {
-//   const reader = new FileReader();
-
-//   reader.onloadend = () => {
-//     const base64Audio = reader.result; // Convert blob to base64 string
-
-//     const user = JSON.parse(localStorage.getItem('loggedInUser'));
-//     const receivers = user.receivers || [];
-
-//     const newMsg = {
-//       type: 'audio',
-//       content: base64Audio,
-//       sender: user.email,
-//       receivers: receivers,
-//       timestamp: new Date().toISOString(),
-//     };
-
-//     const messages = JSON.parse(localStorage.getItem('messages')) || [];
-//     messages.push(newMsg);
-//     localStorage.setItem('messages', JSON.stringify(messages));
-
-//     displayMessages(); // Re-render UI
-//   };
-
-//   reader.readAsDataURL(blob); // Convert to base64
-// }
-
-
+// -------------Save Audio Message Function----------
+// This function saves the audio message as a Base64 string in localStorage
 function saveAudioMessage(blob) {
   const reader = new FileReader();
 
@@ -303,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const confirmLogout = confirm("Are you sure you want to log out?");
       if (confirmLogout) {
         localStorage.removeItem('loggedInUser');
-        window.location.href = '/Pages/login.html';
+        window.location.href = '/login.html'; // Redirect to home page
       }
     });
   }
@@ -313,3 +283,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+ 
